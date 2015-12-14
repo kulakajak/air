@@ -1,4 +1,5 @@
 'use strict';
+var exec = require('child_process').exec;
 
 var path = require('path');
 var gulp = require('gulp');
@@ -23,6 +24,9 @@ function browserSyncInit(baseDir, browser) {
 
   var server = {
     baseDir: baseDir,
+    middleware: [
+      proxyMiddleware("/api", { target: "http://localhost:3000" })
+    ],
     routes: routes
   };
 
@@ -36,6 +40,7 @@ function browserSyncInit(baseDir, browser) {
   // server.middleware = proxyMiddleware('/users', {target: 'http://jsonplaceholder.typicode.com', changeOrigin: true});
 
   browserSync.instance = browserSync.init({
+    port: 9000,
     startPath: '/',
     server: server,
     browser: browser
