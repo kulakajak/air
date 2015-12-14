@@ -45,3 +45,7 @@ group :development do
   gem 'spring'
 end
 
+# user auth with devise and ng-token-auth
+gem "devise_token_auth"
+gem "omniauth"
+
