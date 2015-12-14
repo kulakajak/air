@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  resources :articles
+
+  scope '/api' do
+    namespace :v1, defaults: { format: :json } do
+      resources :articles, except: [:new, :edit]
+    end
+  end
+
   mount_devise_token_auth_for 'User', at: 'auth'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
