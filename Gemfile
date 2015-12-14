@@ -49,3 +49,4 @@ end
 gem "devise_token_auth"
 gem "omniauth"
 
+gem 'rails_12factor', group: :production
