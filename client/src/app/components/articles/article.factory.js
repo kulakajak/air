@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('myappAngular')
-  .factory('Articles', function ($resource) {
+  .factory('Article', function ($resource) {
     return $resource('api/v1/articles/:articleId', {
       articleId: '@id'
     }, {

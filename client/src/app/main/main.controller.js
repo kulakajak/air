@@ -13,7 +13,7 @@
     vm.classAnimation = '';
     vm.creationDate = 1450100259030;
     vm.showToastr = showToastr;
-    Articles.query(function (res) {
+    Article.query(function (res) {
       vm.articles = res;
     });
 
