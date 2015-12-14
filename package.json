@@ -1,0 +1,13 @@
+{
+  "name": "rootApp",
+  "scripts": {
+  },
+  "dependencies": {
+    "myappAngular": "file:./client"
+  },
+  "cacheDirectories": [
+    "client/node_modules",
+    "client/bower_components"
+  ]
+}
+
