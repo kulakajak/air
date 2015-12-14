@@ -3,9 +3,11 @@
   "version": "0.0.0",
   "dependencies": {},
   "scripts": {
+    "postinstall": "bower install && gulp build",
     "test": "gulp test"
   },
-  "devDependencies": {
+  "dependencies": {
+    "bower": "*", 
     "estraverse": "~4.1.0",
     "gulp": "~3.9.0",
     "gulp-autoprefixer": "~3.0.2",
